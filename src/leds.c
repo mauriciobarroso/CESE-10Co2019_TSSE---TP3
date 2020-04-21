@@ -55,8 +55,8 @@ void Leds_All_On( void )
 uint8_t Leds_Check( uint8_t led )
 {
     /* código mínimo para que pase la prueba */
-    return 1;
+    //return 1;
 
     /* código para que funcione correctamente con todos los LEDs */
-    //return ( ( *leds & Leds_Bits( led ) ) >> ( led - LED_OFFSET ) );
+    return ( ( *leds & Leds_Bits( led ) ) >> ( led - LED_OFFSET ) );
 }

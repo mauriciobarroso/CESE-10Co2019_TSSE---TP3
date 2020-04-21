@@ -94,4 +94,8 @@ void test_CheckLedStatus( void )
     Leds_On( led );
     ledStatus = Leds_Check( led );
     TEST_ASSERT_EQUAL( BIT_ON, ledStatus );
+    /* se apaga el LED 16 para verificar que su estado es 0 */
+    Leds_Off( led );
+    ledStatus = Leds_Check( led );
+    TEST_ASSERT_EQUAL( BIT_OFF, ledStatus );
 }
